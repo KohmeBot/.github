@@ -47,6 +47,7 @@ jobs:
           go build -o get-version version.go
           VERSION=$(./get-version)
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION"
           git checkout .
 
       - name: Check version increment
